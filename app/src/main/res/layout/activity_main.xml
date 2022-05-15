@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,55 +20,81 @@
         app:layout_constraintHorizontal_bias="1.0"
         android:layout_marginRight="32dp"
         app:layout_constraintBottom_toTopOf="@+id/mPhotoImageView"/>
+
+
     <Button
         android:id="@+id/mGalleryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="buttonSelectPhoto"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="2dp"
         android:layout_marginBottom="8dp"
+        android:text="buttonSelectPhoto"
         app:layout_constraintBottom_toTopOf="@+id/mPhotoImageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mCameraButton"
+        app:layout_constraintEnd_toStartOf="@+id/mDetectButton"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintEnd_toStartOf="@+id/mDetectButton"/>
-
+        app:layout_constraintStart_toEndOf="@+id/mCameraButton"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/mPhotoImageView"
         android:layout_width="350dp"
         android:layout_height="400dp"
+        android:layout_above="@+id/bottomNavigationBar"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="156dp"
         android:contentDescription="descriptionImage"
+        app:layout_constraintBottom_toTopOf="@+id/mDetectButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:color/darker_gray"
         app:layout_constraintVertical_chainStyle="packed"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/mDetectButton"/>
-
+        app:srcCompat="@android:color/darker_gray" />
 
     <Button
-        android:text="buttonDiagnose"
+        android:id="@+id/mDetectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/mDetectButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_above="@+id/bottomNavigationBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="89dp"
+        android:text="buttonDiagnose"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/mResultTextView"
-        android:layout_marginBottom="8dp"/>
-    <TextView
-        android:text="defaultImage"
-        android:layout_width="0dp"
-        android:layout_height="75dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="32dp"
-        android:id="@+id/mResultTextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/mResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_above="@+id/bottomNavigationBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="10dp"
+        android:text="defaultImage"
+        android:textAlignment="center"
         android:textStyle="bold"
-        android:textAlignment="center"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        android:clickable="true"
+        android:defaultFocusHighlightEnabled="true"
+        android:nextFocusUp="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        app:menu="@menu/bottom_navigation"
+        android:focusable="true" />
+</RelativeLayout>
+

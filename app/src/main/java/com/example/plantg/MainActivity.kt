@@ -5,11 +5,13 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.Gravity
+import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        BottomNavigation()
         mClassifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
 
         resources.assets.open(mSamplePath).use {
@@ -54,7 +56,34 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun BottomNavigation() {
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationBar)
+        bottomNavigationView.selectedItemId = R.id.home
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when (bottomNavigationView.selectedItemId) {
+                R.id.home -> {
+                    startActivity(Intent(applicationContext, MainActivity::class.java))
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.category -> {
+                    startActivity(Intent(applicationContext, SignUp::class.java))
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.payment -> {
+                    startActivity(Intent(applicationContext, Payment::class.java))
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.profile -> {
+                    startActivity(Intent(applicationContext, ProfileActivity::class.java))
+                    return@setOnNavigationItemSelectedListener true
+                }
+            }
+            false
+        }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == mCameraRequestCode){
             //Considérons le cas de la caméra annulée
             if(resultCode == Activity.RESULT_OK && data != null) {
@@ -99,6 +128,7 @@ class MainActivity : AppCompatActivity() {
         matrix.postScale(scaleWidth, scaleHeight)
         return Bitmap.createBitmap(bitmap, 0, 0, orignalWidth, originalHeight, matrix, true)
     }
+
 
 }
 

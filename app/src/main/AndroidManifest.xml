@@ -10,12 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlantG">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false"
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/Theme.PlantG.NoActionBar" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".onBoardingScreen.OnBoarding"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
