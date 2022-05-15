@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        BottomNavigation()
+
         mClassifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
 
         resources.assets.open(mSamplePath).use {
@@ -54,27 +54,31 @@ class MainActivity : AppCompatActivity() {
             mResultTextView.text= results?.title+"\n Confidence:"+results?.confidence
 
         }
+        BottomNavigation()
     }
 
     private fun BottomNavigation() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationBar)
         bottomNavigationView.selectedItemId = R.id.home
-        bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem? ->
+        bottomNavigationView.setOnNavigationItemSelectedListener {
             when (bottomNavigationView.selectedItemId) {
                 R.id.home -> {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
+                    startActivity(Intent(this, MainActivity::class.java))
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.category -> {
-                    startActivity(Intent(applicationContext, SignUp::class.java))
+                    startActivity(Intent(this, SignUp::class.java))
+                    finish()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.payment -> {
-                    startActivity(Intent(applicationContext, Payment::class.java))
+                    startActivity(Intent(this, Payment::class.java))
+
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.profile -> {
-                    startActivity(Intent(applicationContext, ProfileActivity::class.java))
+                    startActivity(Intent(this, ProfileActivity::class.java))
+
                     return@setOnNavigationItemSelectedListener true
                 }
             }
