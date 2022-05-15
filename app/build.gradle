@@ -43,6 +43,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     //gif
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+    implementation 'org.tensorflow:tensorflow-lite:2.1.0'
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 }
