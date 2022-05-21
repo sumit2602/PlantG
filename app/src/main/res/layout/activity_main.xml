@@ -68,6 +68,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="weather" />
+    <TextView
+        android:layout_marginLeft="@dimen/dp_50"
+        android:id="@+id/temp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        android:text="click here for more weather info" />
 
 
 
