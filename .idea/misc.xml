@@ -3,21 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.1655" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/drawable/edittext_bg.xml" value="0.1655" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/drawable/ic_back.xml" value="0.1655" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/drawable/ic_verify.xml" value="0.1655" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/font/poppins.xml" value="0.209375" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_login.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_on_boarding.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_payment.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_profile.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_scan.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_splash_screen.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/activity_verify.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/layout/slider_container.xml" value="0.15579710144927536" />
-        <entry key="..\:/Users/Sumit Rai/Desktop/project/PlantG/app/src/main/res/menu/bottom_navigation.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/drawable/gradient_bg.xml" value="0.1675" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1675" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1675" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.1675" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/drawable/ic_home.xml" value="0.1675" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/layout/activity_tempdetail.xml" value="0.16077898550724637" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/layout/activity_youtube_web.xml" value="0.16077898550724637" />
+        <entry key="..\:/Users/Sumit Rai/Downloads/PlantG1/PlantG1/app/src/main/res/menu/bottom_navigation.xml" value="0.25" />
       </map>
     </option>
   </component>

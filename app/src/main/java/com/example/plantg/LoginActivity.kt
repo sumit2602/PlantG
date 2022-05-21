@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.activity_login.*
 import java.util.concurrent.TimeUnit
 
 class LoginActivity : AppCompatActivity() {
@@ -36,7 +37,9 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, MainActivity::class.java))
             finish()
         }
-
+        ivGoogle.setOnClickListener{
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+        }
         Login.setOnClickListener{
             login()
         }

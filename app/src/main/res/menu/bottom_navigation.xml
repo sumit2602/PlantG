@@ -7,14 +7,14 @@
         android:title="Home"/>
     <item
         android:id="@+id/category"
-        android:icon="@drawable/ic_baseline_add_location_24"
+        android:icon="@drawable/ic_baseline_camera_24"
         android:title="Categories"/>
     <item
         android:id="@+id/payment"
-        android:icon="@drawable/ic_baseline_payment_24"
+        android:icon="@drawable/ic_baseline_file_open_24"
         android:title="Payment"/>
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_baseline_account_box_24"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"
         android:title="Profile"/>
 </menu>

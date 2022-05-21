@@ -10,16 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlantG">
         <activity
-            android:name=".Verify"
+            android:name=".YoutubeActivityWeb"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".ScanActivity"
+            android:name=".Verify"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+
+            android:name=".tempdetail"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Payment"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".SignUp"
@@ -28,6 +37,7 @@
             android:theme="@style/Theme.PlantG.NoActionBar" />
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".onBoardingScreen.OnBoarding"
@@ -35,6 +45,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
