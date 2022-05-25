@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
-        temp.setOnClickListener {
+        temp1.setOnClickListener {
             val i  = Intent(this, tempdetail::class.java)
             startActivity(i)
         }
