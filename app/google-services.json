@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "783154556605",
+    "project_id": "plantg-f6d0e",
+    "storage_bucket": "plantg-f6d0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783154556605:android:d82f15c06bb5790d1391d4",
+        "android_client_info": {
+          "package_name": "com.example.plantg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783154556605-bncul3dr07pug8jtdmpvsco1719q63pk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plantg",
+            "certificate_hash": "aada52dff158dc6e33725c5cb9757840e6ebbb9b"
+          }
+        },
+        {
+          "client_id": "783154556605-v1akdvqpc07ffgvoatk7q9m11lvd69f5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI5jk67FVlhXgDGmG-Ok9lLDe43z8ckvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783154556605-v1akdvqpc07ffgvoatk7q9m11lvd69f5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

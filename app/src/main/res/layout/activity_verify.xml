@@ -48,15 +48,14 @@
             app:hideLineWhenFilled="true"
             style="@style/PinWidget.PinView"
             app:itemRadius="5dp"/>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/verifyBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Verify"
+            android:textColor="@color/white"
             android:textAllCaps="false"
-
             android:layout_margin="40dp"
-            android:textColor="#ffffff"
-            android:background="#6372FF"/>
+            android:background="#FF018786" />
     </LinearLayout>
 </LinearLayout>

@@ -15,7 +15,7 @@
         android:elevation="4dp">
 
         <LinearLayout
-            android:background="#50C2C9"
+            android:background="#FF018786"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PlanteR"
+                android:text="PlantR"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:layout_marginStart="4dp"
@@ -60,21 +60,33 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="wind.json"
         app:lottie_loop="true" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_50"
+    android:layout_marginTop="80dp"
+    android:textStyle="bold"
+    android:text="Today's Weather"
+    />
 
     <TextView
-        android:layout_marginLeft="@dimen/dp_50"
         android:id="@+id/temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="weather" />
-    <TextView
         android:layout_marginLeft="@dimen/dp_50"
+        android:layout_marginTop="100dp"
+        android:text="weather"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/temp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_50"
         android:layout_marginTop="115dp"
         android:text="click here for more weather info" />
+
+
 
 
 
@@ -91,6 +103,21 @@
         app:lottie_loop="true" />
 
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="166dp"
+        android:layout_height="114dp"
+        android:layout_above="@+id/mResultTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="475dp"
+        android:layout_toEndOf="@+id/temp1"
+        android:text="buttonDiagnose"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="weather.json"
+        app:lottie_loop="true" />
+
     <TextView
         android:id="@+id/mResultTextView"
         android:layout_width="match_parent"
@@ -102,9 +129,10 @@
 
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="17dp"
-        android:text="defaultImage"
+        android:text="Result"
         android:textAlignment="center"
         android:textStyle="bold"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -124,7 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="#50C2C9"
+        android:background="#FF018786"
         android:orientation="horizontal">
 
 
@@ -177,14 +205,14 @@
             android:id="@+id/webview"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="#50C2C9"
             android:layout_gravity="center"
             android:layout_marginStart="20dp"
             app:lottie_autoPlay="true"
-            app:lottie_fileName="youtube.json"
+            app:lottie_fileName="youtubes.json"
             app:lottie_loop="true" />
 
         <TextView
+            android:background="#FF018786"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
