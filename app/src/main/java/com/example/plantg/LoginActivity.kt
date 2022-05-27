@@ -32,6 +32,8 @@ class LoginActivity : AppCompatActivity() {
         val Login=findViewById<Button>(R.id.loginBtn)
 
 
+        googleLogin()
+
         var currentUser = auth.currentUser
         if(currentUser != null) {
             startActivity(Intent(applicationContext, MainActivity::class.java))
@@ -70,6 +72,10 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+    }
+
+    private fun googleLogin() {
 
     }
 

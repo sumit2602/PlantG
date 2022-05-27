@@ -1,17 +1,16 @@
 package com.example.plantg
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Matrix
+import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.Gravity
 import android.view.View
-import android.widget.ProgressBar
-import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -22,23 +21,27 @@ import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class MainActivity : AppCompatActivity() {
-    private lateinit var mClassifier: Classifier
-    private lateinit var mBitmap: Bitmap
 
-    private val mCameraRequestCode = 0
-    private val mGalleryRequestCode = 2
+    companion object {
+        lateinit var mClassifier: Classifier
+        lateinit var mBitmap: Bitmap
 
-    private val mInputSize = 224
-    private val mModelPath = "model.tflite"
-    private val mLabelPath = "labels.txt"
-    private val mSamplePath = "wind.json"
+        private val mCameraRequestCode = 0
+        private val mGalleryRequestCode = 2
 
-    //for showing weather info
+        private val mInputSize = 224
+        private val mModelPath = "model.tflite"
+        private val mLabelPath = "labels.txt"
+        private val mSamplePath = "wind.json"
+        val resultM: String? = null
 
-    val CITY: String = "delhi ,in"
-    val API: String = "06c921750b9a82d8f5d1294e1586276f" // Use API key
+        //for showing weather info
 
+        val CITY: String = "delhi ,in"
+        val API: String = "06c921750b9a82d8f5d1294e1586276f" // Use API key
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -63,8 +66,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
         mCameraButton.setOnClickListener {
+            mDetectButton.visibility = View.VISIBLE
             val callCameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivityForResult(callCameraIntent, mCameraRequestCode)
+
         }
         home.setOnClickListener {
             val i = Intent(applicationContext, MainActivity::class.java)
@@ -79,14 +84,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
         mGalleryButton.setOnClickListener {
+            mDetectButton.visibility = View.VISIBLE
             val callGalleryIntent = Intent(Intent.ACTION_PICK)
             callGalleryIntent.type = "image/*"
             startActivityForResult(callGalleryIntent, mGalleryRequestCode)
+
         }
         mDetectButton.setOnClickListener {
-            val results = mClassifier.recognizeImage(mBitmap).firstOrNull()
-            mResultTextView.text = results?.title + "\n Confidence:" + results?.confidence
-
+            finish()
+            val i = Intent(this, ResultActivity::class.java);
+            startActivity(i);
         }
         weatherTask().execute()
         // BottomNavigation()
@@ -182,7 +189,7 @@ class MainActivity : AppCompatActivity() {
                 toast.setGravity(Gravity.BOTTOM, 0, 20)
                 toast.show()
                 mPhotoImageView.setImageBitmap(mBitmap)
-                mResultTextView.text= "Your photo image set now."
+                //  mResultTextView.text= "Your photo image set now."
             } else {
                 Toast.makeText(this, "Camera cancel..", Toast.LENGTH_LONG).show()
             }
