@@ -26,12 +26,12 @@ class ResultActivity : AppCompatActivity() {
 
            if (results!!.title.equals("Tomato_Septoria_leaf_spot")) {
 
-                    browser.loadUrl("https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/diseases/fungal-spots/septoria-leaf-spot-of-tomato.aspx");
+                    browser.loadUrl("https://www.pau.edu/potato/lb_disease.php#:~:text=Late%20blight%20caused%20by%20the,as%2080%25%20in%20epidemic%20years.");
                 }
 
             else {
 
-                    browser.loadUrl("https://plantinfo.co.za/plant/aloe-marlothii/");
+                    browser.loadUrl("https://www.pau.edu/potato/lb_disease.php#:~:text=Late%20blight%20caused%20by%20the,as%2080%25%20in%20epidemic%20years.");
                browser.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
 
             }
