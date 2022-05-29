@@ -36,5 +36,13 @@ class ResultActivity : AppCompatActivity() {
 
             }
 
+
+        //for potato
+        if (results!!.title.equals("Tomato_Septoria_leaf_spot")) {
+
+            browser.loadUrl("https://www.pau.edu/potato/lb_disease.php#:~:text=Late%20blight%20caused%20by%20the,as%2080%25%20in%20epidemic%20years.");
         }
+
+
+    }
     }

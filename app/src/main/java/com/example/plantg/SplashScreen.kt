@@ -12,7 +12,8 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler().postDelayed({
-            val intent = Intent(this, OnBoarding::class.java)
+            val intent = Intent(this, OnBoarding::class.java) //
+
             startActivity(intent)
             finish()
         }, 3000) // 3000 is the delayed time in milliseconds.

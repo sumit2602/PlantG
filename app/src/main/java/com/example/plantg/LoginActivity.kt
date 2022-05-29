@@ -42,16 +42,15 @@ class LoginActivity : AppCompatActivity() {
         val Login=findViewById<Button>(R.id.loginBtn)
 
 
-        googleLogin()
+        googleLogin() // for google signup
+        facebookLogin() // for facebooksignup
 
         var currentUser = auth.currentUser
         if(currentUser != null) {
             startActivity(Intent(applicationContext, MainActivity::class.java))
             finish()
         }
-//        ivGoogle.setOnClickListener{
-//            startActivity(Intent(applicationContext, MainActivity::class.java))
-//        }
+
         Login.setOnClickListener{
             login()
         }
@@ -85,6 +84,12 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    private fun facebookLogin() {
+        TODO("Not yet implemented")
+    }
+
+
+    //for google
     private fun googleLogin() {
         FirebaseApp.initializeApp(this)
 
@@ -152,7 +157,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-
+//for mobile
     private fun login() {
         val mobileNumber=findViewById<EditText>(R.id.phoneNumber)
         var number=mobileNumber.text.toString().trim()

@@ -65,24 +65,31 @@ class MainActivity : AppCompatActivity() {
             val i  = Intent(this, tempdetail::class.java)
             startActivity(i)
         }
+
+        //for opening camera
         mCameraButton.setOnClickListener {
             mDetectButton.visibility = View.VISIBLE
             val callCameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             startActivityForResult(callCameraIntent, mCameraRequestCode)
 
         }
+
+        //for home
         home.setOnClickListener {
             val i = Intent(applicationContext, MainActivity::class.java)
             startActivity(i)
         }
+        //for user activity
         user.setOnClickListener {
             val i  = Intent(this , ProfileActivity::class.java)
             startActivity(i)
         }
+        //for bar button
         backBtn.setOnClickListener {
             val  i = Intent(this,  ProfileActivity::class.java)
             startActivity(i)
         }
+
         mGalleryButton.setOnClickListener {
             mDetectButton.visibility = View.VISIBLE
             val callGalleryIntent = Intent(Intent.ACTION_PICK)
